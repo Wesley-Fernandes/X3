@@ -23,7 +23,7 @@ export default function Requests() {
 
   async function getData(){
     let { data: requests, error } = await supabase
-    .from('MinimalMaterialRequest')
+    .from('MaterialRequest')
     .select('*');
 
 
@@ -52,7 +52,11 @@ export default function Requests() {
   }, [])
   return (
     <main className={style.main}>
-      <DataView value={items} itemTemplate={listTemplateItem} style={{width:'100%'}}  rows={10}/>
+      <DataView
+        value={items}
+        itemTemplate={listTemplateItem}
+        style={{width:'100%'}}
+        rows={10}/>
     </main>
   )
 }
@@ -83,7 +87,7 @@ function listTemplateItem(product:any){
     <div className={style.item} onClick={()=>{push(`/User/Requests/${product.id}`)}}>
       <span className={style.info}>
         <i className={"pi pi-calendar-plus " + style.icon}/>
-        {dateFormat(product.created_at)}
+        {dateFormat(product.inserted_at)}
       </span>
       <span className={style.info}>{product.condominium}</span>
       <span className={style.info}><Tag value={product.status} severity={getSeverity(product)}></Tag></span>
