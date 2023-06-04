@@ -1,0 +1,39 @@
+.main{
+    height: calc(100vh - 60px);
+    width: 100%;
+
+
+    display: flex;
+    align-items: start;
+    justify-content: center;
+
+
+
+    .item{
+        height: 50px;
+        width: 100%;
+        display: flex;
+
+        .info{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: calc(100% / 3);
+            padding: 0 5px;
+            border-right: 1px solid #e9ecef;
+
+            .icon{
+                color: #2196f3;
+                margin-right: 5px;
+            }
+        }
+
+        .info:last-child{
+            border-right: none;
+        }
+    }
+
+    .item:hover{
+        background-color: #d3eafc;
+    }
+}

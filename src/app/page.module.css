@@ -1,0 +1,29 @@
+.main{
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+
+  background: linear-gradient(rgb(0, 136, 170), rgb(7, 68, 180));
+
+  .formulary{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+
+    padding: 15px;
+    border-radius: 15px;
+
+
+
+    .title{
+      font-size: 4rem;
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+
+
+.modal{
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,146 @@
+.main{
+    height: calc(100vh - 60px);
+    background-color: #fff;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .formulary{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 325px;
+        gap: 15px;
+
+        .formulary__title{
+            color: #000000;
+        }
+
+        .formulary__box{
+            height: 67px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 290px;
+
+
+            .formulary__boxSelect{
+                height: 55px;
+                width: 208px;
+            }
+
+            .formulary__boxButton{
+                height: 55px;
+                width: 55px;
+
+                background-color: #00A54F;
+
+                border: none;
+                border-radius: 5px;
+                border-bottom: 5px solid #017237;
+
+
+                font-size: 45px;
+                color: #fff;
+            }
+
+        }
+
+        .formulary__list{
+            height: 236px;
+            width: 290px;
+            background-color: #fff;
+            outline: 1px solid black;
+            list-style: none;
+            padding: 5px;
+            margin: 0;
+            
+            border-radius: 5px;
+
+            .icon{
+                color: red;
+                margin-right: 5px;
+            }
+
+
+            .formulary__item{
+                height: 30px;
+                display: flex;
+                align-items: center;
+                width: 100%;
+
+                .formulary__itemRemove{
+                    height: 25px;
+                    width: 25px;
+                    margin-right: 5px;
+                    border: none;
+                    background-color: #e90000;
+                    color: #fff;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .formulary__cancelButton{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 290px;
+            height:  68px;
+
+            border: none;
+            border-radius: 10px;
+
+
+            background-color: #A50000;
+            border-bottom: 5px solid #480202;
+
+            
+            font-size: 30px;
+            font-weight: bold;
+            color: #fff;
+
+
+            .formulary__cancelButtonSvg{
+                font-size: 45px;
+                margin-right: 5px;
+            }
+            
+        }
+
+        .formulary__readyButton{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 290px;
+            height:  68px;
+
+
+            border: none;
+            border-radius: 10px;
+
+
+            background-color: #00A54F;
+            border-bottom: 5px solid #017237;
+
+            font-size: 30px;
+            font-weight: bold;
+            color: #fff;
+
+
+
+            .formulary__readyButtonSvg{
+                font-size: 45px;
+                margin-right: 5px;
+            }
+
+        }
+
+
+    }
+}

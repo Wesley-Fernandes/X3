@@ -1,0 +1,23 @@
+.main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .component{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+
+        .title{
+            font-size: 2.5rem;
+            text-transform: uppercase;
+        }
+
+        .about{
+            text-align: center;
+            width: 320px;
+        }
+    }
+}

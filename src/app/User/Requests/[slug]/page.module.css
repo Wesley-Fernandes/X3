@@ -1,0 +1,224 @@
+.main{
+    height: calc(100vh - 60px);
+    background-color: #ffffff;
+
+
+    .header{
+        height: 140px;
+        padding: 5px;
+        background-color: #383838;
+
+        .statusDivEspera{
+            display: flex;
+            justify-content: center;
+            padding: 2px 5px;
+
+            .status{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+
+                height: 35px;
+                width: 120px;
+                border-radius: 35px;
+
+                font-weight: bold;
+                background-color: #929292;
+                color: #fff;
+            }
+        }
+
+        .statusDivAprovado{
+            display: flex;
+            justify-content: center;
+            padding: 2px 5px;
+
+            .status{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+
+                height: 35px;
+                width: 120px;
+                border-radius: 35px;
+
+                font-weight: bold;
+                background-color: #00A54F;
+                color: #fff;
+            }
+        }
+
+        .statusDivReprovado{
+            display: flex;
+            justify-content: center;
+            padding: 2px 5px;
+
+            .status{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+
+                height: 35px;
+                width: 120px;
+                border-radius: 35px;
+
+                font-weight: bold;
+                background-color: #a50000;
+                color: #fff;
+            }
+        }
+
+        .user{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 5px;
+
+            
+            .userPicBox{
+                height: 70px;
+                width: 70px;
+                border-radius: 50%;
+                margin-top: 5px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                outline: 4px solid #00A54F;
+
+                .userPicture{
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+
+    .condominum{
+        height: 100px;
+        background-color: #383838;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+        .info{
+            color: #fff;
+            width: 100%;
+            padding: 2px;
+
+            display: flex;
+            align-items: center;
+
+
+            .svg{
+                margin-right: 5px;
+            }
+        }
+
+        .name{
+            color: #ffffff;
+        }
+
+        .data{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            background-color: #918c08;
+            color: #ffffff;
+            border-radius: 25px;
+            width: 200px;
+        }
+    }
+
+
+    .listBox{
+        height: 300px;
+        width: 100%;
+        padding: 5px;
+
+        .title{
+            color: #000000;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 25px;
+            padding: 5px 0;
+        }
+
+        .list{
+            height: calc(100% - 30px);
+            background-color: #fff;
+            padding: 5px;
+            overflow-y: scroll;
+            border-radius: 5px;
+            outline: 1px solid #dddddd88;
+
+            .item{
+                padding: 5px;
+                color: #000000;
+            }
+
+        }
+    }
+
+
+    .footer{
+        display: flex;
+        flex-direction: column;
+        height: 290px;
+        margin-top: 5px;
+
+        .title{
+            height: 25px;
+            margin: 5px;
+        }
+
+        .content{
+            height: calc(100% - 25px);
+            display: flex;
+            padding: 5px;
+
+            .imageBox{
+                min-height: 50px;
+                max-height: 50px;
+                min-width: 50px;
+                max-width: 50px;
+                overflow: hidden;
+                border-radius: 50%;
+                margin-top: 2px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .image{
+                    height: 100%;
+                }
+            }
+            .answer{
+                margin-left: 5px;
+                padding: 5px;
+                background-color: #dddddd88;
+                height: fit-content;
+                border-radius: 5px;
+                
+            }
+        }
+
+        .noAnswer{
+            padding: 5px;
+            background-color: #dddddd88;
+            margin: 5px;
+            text-align: center;
+            height: fit-content;
+            border-radius: 5px;
+        }
+    }
+}
