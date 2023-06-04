@@ -67,6 +67,7 @@ export default function MakeUser({next, info, informations, login}:ICreatingUser
           birth,
           admin: false,
           user: false,
+          status: false,
           week: [],
           started: String(Date.now()),
           condominium: 'Nenhum',
