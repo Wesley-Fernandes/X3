@@ -8,11 +8,9 @@ import Navbar from '../Navbar';
 import LoadingPage from '../LoadingPage';
 import NotAllowed from '../NotAllowed';
 
-interface ISecureProps {
-  children: React.ReactNode;
-}
 
-export default function Secure({ children }: ISecureProps) {
+
+export default function Secure({ children }: any) {
   const [loading, setLoading] = useState<boolean>(true);
   const [permission, setPermission] = useState<boolean>(false);
   const [user, setUser] = useState<any>({
