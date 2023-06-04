@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import styles from './page.module.css'
 
 import { supabase } from '@modules/supabase/supabase'
@@ -9,13 +8,14 @@ import { useRouter } from 'next/navigation'
 //PRIME REACT
 import { InputText } from 'primereact/inputtext'
 import { Button } from 'primereact/button'
-import { FormEvent, useState } from 'react'
+import { FormEvent, useEffect, useState } from 'react'
 import { contextUSER } from '@modules/context/ctx_user'
 import { ICreatingUser } from './CreateUser/page'
 import { IUserSupabase } from '@modules/types/user'
 
 export default function Home() {
   const   [loading, setLoading] = useState<boolean>(false);
+  const   [dom, setDom] = useState<boolean>(false);
   const   setup = contextUSER((state)=>state.setup);
   const   {push} = useRouter();
 
@@ -42,7 +42,8 @@ export default function Home() {
 
     if(LoginError){
       setLoading(false)
-      throw new Error(LoginError.message);
+      console.error(LoginError.message);
+      return
     }
 
     console.log(Login)
@@ -55,7 +56,8 @@ export default function Home() {
 
       if(UserError){
         setLoading(false)
-        throw new Error(UserError.message)
+        console.error(UserError.message);
+        return
       }
 
       console.log(User)
@@ -74,9 +76,13 @@ export default function Home() {
     return
   }
 
+  useEffect(()=>{
+    setDom(true)
+  }, [])
   return (
     <main className={styles.main}>
-      <form className={styles.formulary} onSubmit={submit}>
+      {dom==true &&(
+        <form className={styles.formulary} onSubmit={submit}>
         <h1  className={styles.title}>X3</h1>
         <span className="p-input-icon-left">
             <i className="pi pi-envelope" />
@@ -111,6 +117,7 @@ export default function Home() {
           onClick={()=>{push('/CreateUser')}}
           severity="secondary" />
       </form>
+      )}
     </main>
   )
 }
